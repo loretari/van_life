@@ -69,7 +69,8 @@ header a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 350px;
+    /*min-height: 350px;*/
+    min-height: 850px;
     color: white;
     padding: 45px 23px;
 }
@@ -91,7 +92,8 @@ header a:hover {
     background-color: #FF8C38;
     border: none;
     width: 100%;
-    margin-top: 27px;
+    /*margin-top: 27px;*/
+    margin-top: 90px;
     padding-block: .75rem;
     color: white;
     font-weight: 700;
