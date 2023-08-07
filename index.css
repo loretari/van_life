@@ -182,7 +182,7 @@ footer {
 
 .van-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     gap: 34px;
     margin-top: 57px;
@@ -194,7 +194,8 @@ footer {
 }
 
 .van-title img {
-    max-width: 100%;
+    /*max-width: 100%;*/
+    max-width: 60%;
     border-radius: 5px;
 }
 
