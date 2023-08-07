@@ -113,7 +113,8 @@ footer {
     background-color: #FF8C38;
     border: none;
     width: 100%;
-    margin-top: 27px;
+    /*margin-top: 27px;*/
+    margin-top: 120px;
     padding-block: .75rem;
     color: white;
     font-weight: 700;
@@ -129,7 +130,8 @@ footer {
 
 /*** ABOUT PAGE ***/
 .about-hero-image {
-    max-width: 100%;
+    /*max-width: 100%;*/
+    width: 100%;
 }
 
 .about-page-content {
@@ -180,12 +182,12 @@ footer {
     margin-top: 57px;
 }
 
-.van-tile a {
+.van-title a {
     color: #161616;
     text-decoration: none;
 }
 
-.van-tile img {
+.van-title img {
     max-width: 100%;
     border-radius: 5px;
 }
@@ -247,6 +249,9 @@ footer {
 i[class*='van-type-'] {
     padding: 7px 14px;
 }
+
+
+/*  VAN DETAIL*/
 
 .van-detail-container {
     padding: 27px;
