@@ -5,7 +5,7 @@ export default function HostVanDetail() {
 
     return (
         <div>
-            <h1>Host Van Detail Pages</h1>
+            <h1>Host Van Detail Page</h1>
         </div>
     )
 }
