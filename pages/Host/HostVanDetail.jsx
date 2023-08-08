@@ -1,6 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
+import {useParams, Link, Outlet} from "react-router-dom"
+
 
 
 export default function HostVanDetail() {
@@ -17,30 +17,31 @@ export default function HostVanDetail() {
         return <h1>Loading...</h1>
     }
 
+
+
     return (
-        <section>
-            <Link
-                to=".."
-                relative= "path"
-                className="back-button"
-            >&larr; <span>Back to all vans</span></Link>
 
-            <div className= "host-van-detail-layout-container">
-                <div className= "host-van-detail">
-                    <img src={currentVan.imageUrl} />
-                    <div className= "host-van-detail-info-text">
-                        <i className={`van-type van-type-${currentVan.type}`}>
-                            {currentVan.type}
-                        </i>
-                        <h3>{currentVan.name}</h3>
-                        <h4>{currentVan.price}</h4>
+            <section>
+                <Link
+                    to=".."
+                    relative= "path"
+                    className="back-button"
+                >&larr; <span>Back to all vans</span></Link>
+
+                <div className= "host-van-detail-layout-container">
+                    <div className= "host-van-detail">
+                        <img src={currentVan.imageUrl} />
+                        <div className= "host-van-detail-info-text">
+                            <i className={`van-type van-type-${currentVan.type}`}>
+                                {currentVan.type}
+                            </i>
+                            <h3>{currentVan.name}</h3>
+                            <h4>{currentVan.price}</h4>
+                        </div>
                     </div>
-
-
+                    <Outlet />
                 </div>
-
-            </div>
-        </section>
+            </section>
 
     )
 }
