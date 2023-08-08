@@ -9,8 +9,10 @@ export default function Vans() {
     const [vans, setVans] = React.useState([])
 
     const typeFilter = searchParams.get("type")
-    console.log(typeFilter)
 
+    const displayedVans = typeFilter
+    ? vans.filter(van => van.type === typeFilter)
+        : vans
 
 
     React.useEffect(() => {
@@ -19,7 +21,7 @@ export default function Vans() {
             .then(data => setVans(data.vans))
     }, [])
 
-  const vanElements = vans.map(van => (
+  const vanElements = displayedVans.map(van => (
           <div key={van.id} className= "van-title">
               <Link to={`/vans/${van.id}`}>
                   <img src={van.imageUrl} />
