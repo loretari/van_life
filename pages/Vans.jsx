@@ -9,6 +9,7 @@ export default function Vans() {
     const [vans, setVans] = React.useState([])
 
     const typeFilter = searchParams.get("type")
+    console.log(searchParams.toString())
 
     const displayedVans = typeFilter
     ? vans.filter(van => van.type === typeFilter)
@@ -23,7 +24,7 @@ export default function Vans() {
 
   const vanElements = displayedVans.map(van => (
           <div key={van.id} className= "van-title">
-              <Link to={van.id}>
+              <Link to={van.id} state = {{ search: searchParams.toString() }}>
                   <img src={van.imageUrl} />
                   <div className= "van-info">
                       <h3>{van.name}</h3>
