@@ -1,10 +1,10 @@
-import { createServer, Model } from "miragejs"
+import { createServer, Model, Response } from "miragejs"
 
 
 createServer({
     models: {
         vans: Model,
-        user: Model
+        users: Model
     },
 
     seeds(server) {
@@ -60,6 +60,5 @@ createServer({
                 token: "Enjoy your pizza, here's your tokens."
             }
         })
-
     }
 })
