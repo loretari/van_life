@@ -6,7 +6,12 @@ import {
 } from "react-router-dom"
 import {loginUser} from "../api";
 
-export async function action() {
+export async function action( {request} ) {
+    const formData = await request.formData()
+    const email = formData.get("email")
+    const password = formData.get("password")
+    console.log(email, password)
+
     console.log("Action function")
     return null
 }
