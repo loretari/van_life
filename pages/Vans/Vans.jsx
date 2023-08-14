@@ -1,11 +1,13 @@
 import React from "react";
-import { Link, useSearchParams, useLoaderData } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData, defer } from "react-router-dom";
 import { getVans } from "../../api";
 
 
-export function loader() {
-    return getVans()
+export async function loader() {
+    return defer({ vans: getVans() })
 }
+
+
 
 export default function Vans() {
 
