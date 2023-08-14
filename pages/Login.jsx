@@ -2,24 +2,26 @@ import React from "react";
 import {
     useLoaderData,
     useNavigate,
-    Form
+    Form,
+    redirect
 } from "react-router-dom"
 import {loginUser} from "../api";
+
+
+export function loader( {request} ) {
+    return new URL(request.url).searchParams.get("message")
+}
 
 export async function action( {request} ) {
     const formData = await request.formData()
     const email = formData.get("email")
     const password = formData.get("password")
    const data =await loginUser({email, password})
-    console.log(data)
-
-    console.log("Action function")
-    return null
+    localStorage.setItem("loggedin", true)
+    return redirect("/host")
 }
 
-export function loader( {request} ) {
-    return new URL(request.url).searchParams.get("message")
-}
+
 
 export default function Login() {
 
