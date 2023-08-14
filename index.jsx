@@ -26,6 +26,7 @@ import Login, {action as loginAction, loader as loginLoader} from "./pages/Login
 import { requireAuth } from "./utils";
 import Error from "./components/Error";
 
+
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
