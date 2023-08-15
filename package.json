@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "*",
+    "firebase": "^10.1.0",
     "vite": "latest"
   },
   "scripts": {
