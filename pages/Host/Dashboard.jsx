@@ -72,8 +72,6 @@ const loaderData = useLoaderData();
                   </Await>
                 </Suspense>
             </section>
-            <h1>Host Dashboard here</h1>
-
         </div>
     )
 
