@@ -11,7 +11,7 @@ import About from "./pages/About"
 import Vans, {loader as vansLoader} from "./pages/Vans/Vans"
 import VanDetail, {loader as vanDetailLoader} from "./pages/Vans/VanDetail"
 import Layout from "./components/Layout"
-import Dashboard from "./pages/Host/Dashboard"
+import Dashboard, { loader as dashboardLoader } from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
 import Reviews from "./pages/Host/Reviews"
 import HostLayout from "./components/HostLayout"
@@ -45,7 +45,8 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route
             path= "/vans/:id"
             element={<VanDetail />}
-        loader={vanDetailLoader}
+            errorElement={<Error/>}
+            loader={vanDetailLoader}
         />
 
 
@@ -54,7 +55,7 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route
                 index
                 element={<Dashboard />}
-                loader={ async ({ request }) => await requireAuth(request)}
+                loader={ dashboardLoader}
             />
             <Route
                 path= "income"
